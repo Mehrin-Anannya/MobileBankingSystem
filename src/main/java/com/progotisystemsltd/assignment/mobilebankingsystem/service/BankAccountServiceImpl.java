@@ -38,4 +38,9 @@ public class BankAccountServiceImpl implements BankAccountService{
         return bankAccountRepository.findBankAccountByAccountNumber(accountNumber);
     }
 
+    @Override
+    public BankAccount checkBalanceWithMPN(String mobilePhoneNumber) {
+        return bankAccountRepository.findBalanceByMobilePhoneNumber(mobilePhoneNumber);
+    }
+
 }

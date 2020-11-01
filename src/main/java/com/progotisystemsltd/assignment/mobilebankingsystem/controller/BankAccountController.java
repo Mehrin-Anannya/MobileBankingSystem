@@ -36,4 +36,9 @@ public class BankAccountController {
     public BankAccount getBankAccountByAccountNumber(@PathVariable(value = "accountNumber")Long accountNumber){
         return bankAccountService.getBankAccountByAccountNumber(accountNumber);
     }
+
+    @GetMapping(value = "/checkBalance/{mobilePhoneNumber}")
+    public BankAccount getBankAccountByAccountNumber(@PathVariable(value = "mobilePhoneNumber")String mobilePhoneNumber){
+        return bankAccountService.checkBalanceWithMPN(mobilePhoneNumber);
+    }
 }
